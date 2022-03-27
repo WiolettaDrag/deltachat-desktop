@@ -2,6 +2,12 @@
 
 ## [Unreleased][unreleased]
 
+### Added
+- Keyboard shortcut preview for "Send on Enter" setting
+- Keyboard shortcut reference dialog (cheetsheet), accessible via `Ctrl + /` or `Cmd + /`
+### Changed
+- `ENTER + SHIFT` and `ENTER + CTRL` in the composer do now the same thing: they send or add a newline depending on the `enterKeySends` user preference
+
 ## [1.28.2] - 2022-04-22
 
 ### Changed
