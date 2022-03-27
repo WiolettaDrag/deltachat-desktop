@@ -26,6 +26,10 @@ import { getLogger } from '../../../shared/logger'
 import SettingsCommunication from './Settings-Communication'
 import { runtime } from '../../runtime'
 import SettingsDownloadOnDemand from './Settings-DownloadOnDemand'
+import {
+  enterKeySendsKeyboardShortcuts,
+  KeybordShortcutHintInSettings,
+} from '../KeyboardShortcutHint'
 
 const log = getLogger('renderer/dialogs/Settings')
 
@@ -289,6 +293,11 @@ export default function Settings(props: DialogProps) {
               key: 'enterKeySends',
               label: tx('pref_enter_sends_explain'),
             })}
+            <KeybordShortcutHintInSettings
+              actions={enterKeySendsKeyboardShortcuts(
+                desktopSettings['enterKeySends']
+              )}
+            />
             {renderDTSettingSwitch({
               key: 'notifications',
               label: tx('pref_notifications_explain'),
