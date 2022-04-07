@@ -7,6 +7,9 @@
 - Update emoji-mart to `^3.0.1`
 - Update @types/emoji-mart to `^3.0.9`
 
+### Fixed
+- fix random search result position (#2631) 
+
 ## [1.28.2] - 2022-04-22
 
 ### Changed
