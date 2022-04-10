@@ -4,6 +4,7 @@
 
 ### Changed
 - update nodejs to version 16
+- update electron to `18.0.3`
 ## [1.28.2] - 2022-04-22
 
 ### Changed
