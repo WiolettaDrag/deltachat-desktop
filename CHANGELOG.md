@@ -2,6 +2,8 @@
 
 ## [Unreleased][unreleased]
 
+### Changed
+- update nodejs to version 16
 ## [1.28.2] - 2022-04-22
 
 ### Changed
