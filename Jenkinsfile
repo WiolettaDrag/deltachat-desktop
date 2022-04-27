@@ -8,10 +8,10 @@ stages{
 	stage('Build'){
 		steps
 		{
-                        sh '''
-                        echo 'Building '
-                        docker-compose  build  Dockerfile-build
-                        '''
+			echo 'Building'
+                        checkout scm
+			sh 'npm install'
+                        sh 'npm run build'
 		
 		
 	}
@@ -42,11 +42,8 @@ stages{
 	
 		stage('Test'){
 			steps{
-
-                                sh '''
-                                echo 'Testing'
-                                docker-compose  build  Dockerfile-test
-                                '''
+				echo 'Testing'
+				sh 'npm run test'
 		}
 		
 		post{
