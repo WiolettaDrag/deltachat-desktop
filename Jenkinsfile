@@ -10,8 +10,8 @@ stages{
 		{
 			echo 'Building'
                         checkout scm
-			sh 'docker-compose --file docker-compose.yml build'
-
+			sh 'npm install'
+                        sh 'npm run build'
 		
 		
 	}
@@ -43,7 +43,7 @@ stages{
 		stage('Test'){
 			steps{
 				echo 'Testing'
-				sh 'docker-compose --file docker-compose.yml up'
+				sh 'npm run test'
 		}
 		
 		post{
