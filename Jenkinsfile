@@ -76,9 +76,7 @@ stages{
 		sh '''
                 echo 'Deploy'
                 docker build -t deploy -f Dockerfile-deploy .
-                echo $DOCKERHUB_CREDENTIALS_PSW | docker login -u $DOCKERHUB_CREDENTIALS_USR --password-stdin
-                docker images
-                docker tag deploy:latest dwioletta/jenkins
+                
                 docker push dwioletta/jenkins
                 
                 '''    
